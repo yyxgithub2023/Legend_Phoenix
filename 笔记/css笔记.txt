@@ -1,3 +1,14 @@
 box-sizing 是 CSS 中的一个属性，用于控制元素的盒模型。默认情况下，元素的宽度和高度只包括内容的宽度和高度，不包括边框（border）和内边距（padding）。
 如果将 box-sizing 设置为 border-box，那么元素的宽度和高度就会包括其内边距、边框和内容的总宽度和高度。这个属性在做响应式布局时非常有用，
 可以避免因为边框和内边距的增加而导致布局错乱的问题。
+
+什么是css3 transform?transition?animation?区别是什么？
+CSS3中的transform、transition、animation都是CSS3中的动画效果，它们的区别如下：
+
+transform：主要是用来做2D和3D的变形效果，比如旋转、缩放、平移、倾斜等等。
+
+transition：主要是用来做CSS属性的过渡效果，比如鼠标悬停时背景色渐变、宽度变化等等。
+
+animation：主要是用来做CSS属性的关键帧动画，比如一个元素从左到右平移、一个元素旋转等等。
+
+在使用上，transform和transition通常是结合使用的，而animation则是单独使用的。
