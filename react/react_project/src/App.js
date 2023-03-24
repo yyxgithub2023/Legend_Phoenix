@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+import React, { useState } from 'react';
+import { Layout } from 'antd';
+import Sider from './components/Sider';
+import CustomHeader from './components/Header';
+import CustomContent from './components/Content';
 
-function App() {
+const { Content } = Layout;
+
+const App = () => {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const toggle = () => {
+    setCollapsed(!collapsed);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout style={{height: '100vh'}}>
+      <Sider collapsed={collapsed} />
+      <Layout className="site-layout" style={{height: '100vh'}}>
+        <CustomHeader collapsed={collapsed} toggle={toggle} />
+        <CustomContent />
+      </Layout>
+    </Layout>
   );
-}
+};
 
 export default App;
