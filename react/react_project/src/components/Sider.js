@@ -1,4 +1,3 @@
-// Sider.js
 import React from 'react';
 import { Menu } from 'antd';
 import { UserOutlined, VideoCameraOutlined, UploadOutlined } from '@ant-design/icons';
